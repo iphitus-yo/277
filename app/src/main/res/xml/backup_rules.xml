@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<full-backup-content>
+    <!-- TODO Define backup rules for your app -->
+    <include domain="sharedpref"/>
+    <include domain="database"/>
+    <!-- Exclude specific shared preferences that contain sensitive data -->
+    <!-- <exclude domain="sharedpref" path="secret.xml"/> -->
+</full-backup-content>
+

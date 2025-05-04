@@ -1,0 +1,110 @@
+[
+    {
+        "merged": "com.example.paranalog.app-merged_res-56:/mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "com.example.paranalog.app-main-58:/mipmap-xxxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.example.paranalog.app-merged_res-56:/mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "com.example.paranalog.app-main-58:/mipmap-xxxhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.example.paranalog.app-merged_res-56:/xml_data_extraction_rules.xml.flat",
+        "source": "com.example.paranalog.app-main-58:/xml/data_extraction_rules.xml"
+    },
+    {
+        "merged": "com.example.paranalog.app-merged_res-56:/drawable_ic_launcher_foreground_logo.png.flat",
+        "source": "com.example.paranalog.app-main-58:/drawable/ic_launcher_foreground_logo.png"
+    },
+    {
+        "merged": "com.example.paranalog.app-merged_res-56:/mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "com.example.paranalog.app-main-58:/mipmap-xhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.example.paranalog.app-merged_res-56:/layout_checklist_item.xml.flat",
+        "source": "com.example.paranalog.app-main-58:/layout/checklist_item.xml"
+    },
+    {
+        "merged": "com.example.paranalog.app-merged_res-56:/mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "com.example.paranalog.app-main-58:/mipmap-xxhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.example.paranalog.app-merged_res-56:/navigation_nav_graph.xml.flat",
+        "source": "com.example.paranalog.app-main-58:/navigation/nav_graph.xml"
+    },
+    {
+        "merged": "com.example.paranalog.app-merged_res-56:/mipmap-mdpi_ic_launcher.png.flat",
+        "source": "com.example.paranalog.app-main-58:/mipmap-mdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.example.paranalog.app-merged_res-56:/mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "com.example.paranalog.app-main-58:/mipmap-hdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.example.paranalog.app-merged_res-56:/mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "com.example.paranalog.app-main-58:/mipmap-xhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.example.paranalog.app-merged_res-56:/drawable_ic_picture_as_pdf.xml.flat",
+        "source": "com.example.paranalog.app-main-58:/drawable/ic_picture_as_pdf.xml"
+    },
+    {
+        "merged": "com.example.paranalog.app-merged_res-56:/layout_fragment_login.xml.flat",
+        "source": "com.example.paranalog.app-main-58:/layout/fragment_login.xml"
+    },
+    {
+        "merged": "com.example.paranalog.app-merged_res-56:/drawable_paranalog_logo.png.flat",
+        "source": "com.example.paranalog.app-main-58:/drawable/paranalog_logo.png"
+    },
+    {
+        "merged": "com.example.paranalog.app-merged_res-56:/mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "com.example.paranalog.app-main-58:/mipmap-xxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.example.paranalog.app-merged_res-56:/layout_fragment_register.xml.flat",
+        "source": "com.example.paranalog.app-main-58:/layout/fragment_register.xml"
+    },
+    {
+        "merged": "com.example.paranalog.app-merged_res-56:/layout_fragment_checklist_list.xml.flat",
+        "source": "com.example.paranalog.app-main-58:/layout/fragment_checklist_list.xml"
+    },
+    {
+        "merged": "com.example.paranalog.app-merged_res-56:/mipmap-hdpi_ic_launcher.png.flat",
+        "source": "com.example.paranalog.app-main-58:/mipmap-hdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.example.paranalog.app-merged_res-56:/mipmap-mdpi_ic_launcher_round.png.flat",
+        "source": "com.example.paranalog.app-main-58:/mipmap-mdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.example.paranalog.app-merged_res-56:/drawable_ic_launcher_foreground.xml.flat",
+        "source": "com.example.paranalog.app-main-58:/drawable/ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "com.example.paranalog.app-merged_res-56:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "com.example.paranalog.app-main-58:/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
+        "merged": "com.example.paranalog.app-merged_res-56:/layout_activity_main.xml.flat",
+        "source": "com.example.paranalog.app-main-58:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.example.paranalog.app-merged_res-56:/drawable_ic_launcher_background.xml.flat",
+        "source": "com.example.paranalog.app-main-58:/drawable/ic_launcher_background.xml"
+    },
+    {
+        "merged": "com.example.paranalog.app-merged_res-56:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "com.example.paranalog.app-main-58:/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "com.example.paranalog.app-merged_res-56:/layout_fragment_checklist_form.xml.flat",
+        "source": "com.example.paranalog.app-main-58:/layout/fragment_checklist_form.xml"
+    },
+    {
+        "merged": "com.example.paranalog.app-merged_res-56:/xml_provider_paths.xml.flat",
+        "source": "com.example.paranalog.app-main-58:/xml/provider_paths.xml"
+    },
+    {
+        "merged": "com.example.paranalog.app-merged_res-56:/xml_backup_rules.xml.flat",
+        "source": "com.example.paranalog.app-main-58:/xml/backup_rules.xml"
+    }
+]

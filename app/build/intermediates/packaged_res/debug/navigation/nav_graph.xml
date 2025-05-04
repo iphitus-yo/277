@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loginFragment"> 
+    <!-- Start with RegisterFragment -->
+
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.example.paranalog.ui.auth.RegisterFragment"
+        android:label="Cadastro"
+        tools:layout="@layout/fragment_register">
+        <action
+            android:id="@+id/action_registerFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/nav_graph" 
+            app:popUpToInclusive="true" /> 
+            <!-- Go to Login after registration, clear back stack -->
+    </fragment>
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.paranalog.ui.auth.LoginFragment"
+        android:label="Login"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_loginFragment_to_checklistListFragment"
+            app:destination="@+id/checklistListFragment"
+            app:popUpTo="@id/nav_graph"
+            app:popUpToInclusive="true" />
+            <!-- Go to ChecklistList after login, clear back stack -->
+        <action
+            android:id="@+id/action_loginFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
+            <!-- Optional: Allow navigating back to Register? Or handle first time logic -->
+    </fragment>
+
+    <fragment
+        android:id="@+id/checklistListFragment"
+        android:name="com.example.paranalog.ui.checklist.ChecklistListFragment"
+        android:label="@string/checklist_list_title" 
+        tools:layout="@layout/fragment_checklist_list" >
+        <!-- Action to navigate to the form -->
+        <action
+            android:id="@+id/action_checklistListFragment_to_checklistFormFragment"
+            app:destination="@id/checklistFormFragment" />
+    </fragment>
+
+    <!-- Checklist Form Fragment -->
+    <fragment
+        android:id="@+id/checklistFormFragment"
+        android:name="com.example.paranalog.ui.checklist.ChecklistFormFragment"
+        android:label="@string/checklist_form_title"
+        tools:layout="@layout/fragment_checklist_form" />
+
+    <!-- Add other fragments (VehicleManagement) later -->
+
+</navigation>
+

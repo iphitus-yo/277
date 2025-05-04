@@ -1,0 +1,1177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".ui.checklist.ChecklistFormFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Header Section -->
+        <TextView
+            style="@style/TextAppearance.Material3.TitleLarge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="CHECKLIST PARA INSPEÇÃO DE VEÍCULOS - 19 PONTOS"
+            android:gravity="center"
+            android:layout_marginBottom="16dp" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/local_coleta_layout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Local da Coleta"
+            android:layout_marginBottom="8dp">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/local_coleta_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/responsavel_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Responsável pela Inspeção: [Nome Motorista Automático]"
+            android:textAppearance="@style/TextAppearance.Material3.BodyMedium"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:id="@+id/data_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Data: [Automático]"
+            android:textAppearance="@style/TextAppearance.Material3.BodyMedium"
+            android:layout_marginBottom="8dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp">
+            <TextView
+                android:id="@+id/placa_cavalo_text_view"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Placa cavalo: [Automático]"
+                android:textAppearance="@style/TextAppearance.Material3.BodyMedium" />
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/placa_carreta_layout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:hint="Placa carreta">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/placa_carreta_edit_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/motorista_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Motorista: [Nome Motorista Automático]"
+            android:textAppearance="@style/TextAppearance.Material3.BodyMedium"
+            android:layout_marginBottom="8dp" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/di_due_crt_mic_dta_layout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="N. da DI/DUE/CRT/MIC/DTA"
+            android:layout_marginBottom="8dp">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/di_due_crt_mic_dta_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/nf_e_layout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="N. NF-e"
+            android:layout_marginBottom="8dp">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/nf_e_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp">
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/lacre_entrada_layout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:hint="N. Lacre Entrada">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/lacre_entrada_edit_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/lacre_saida_layout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:hint="N. Lacre Saída">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/lacre_saida_edit_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/peso_bruto_layout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Peso Bruto (Kg)"
+            android:layout_marginBottom="8dp">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/peso_bruto_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <RadioGroup
+            android:id="@+id/rg_tipo_viagem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp">
+            <RadioButton
+                android:id="@+id/rb_pernoite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pernoite" />
+            <RadioButton
+                android:id="@+id/rb_parada"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Parada" />
+        </RadioGroup>
+
+        <!-- Inspection Items Table Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/material_dynamic_neutral90"
+            android:padding="8dp"
+            android:layout_marginTop="16dp">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="3"
+                android:layout_height="wrap_content"
+                android:text="Itens Inspecionados"
+                android:textStyle="bold" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SIM"
+                android:gravity="center"
+                android:layout_marginStart="8dp"
+                android:minWidth="48dp"
+                android:textStyle="bold" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="NÃO"
+                android:gravity="center"
+                android:layout_marginStart="8dp"
+                android:minWidth="48dp"
+                android:textStyle="bold" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="N/A"
+                android:gravity="center"
+                android:layout_marginStart="8dp"
+                android:minWidth="48dp"
+                android:textStyle="bold" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                android:text="Comentários"
+                android:gravity="center"
+                android:layout_marginStart="8dp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- Item 1 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="3"
+                android:layout_height="wrap_content"
+                android:text="1. PARA-CHOQUE" />
+            <RadioGroup
+                android:id="@+id/rg_item1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginStart="8dp">
+                <RadioButton android:id="@+id/rb_item1_sim" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="48dp"/>
+                <RadioButton android:id="@+id/rb_item1_nao" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="8dp" android:minWidth="48dp"/>
+                <RadioButton android:id="@+id/rb_item1_na" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="8dp" android:minWidth="48dp"/>
+            </RadioGroup>
+            <EditText
+                android:id="@+id/et_item1_comment"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                android:hint="Comentário"
+                android:textSize="12sp"
+                android:layout_marginStart="8dp" />
+        </LinearLayout>
+        <View android:layout_width="match_parent" android:layout_height="1dp" android:background="?android:attr/listDivider" />
+
+        <!-- Item 2 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="3"
+                android:layout_height="wrap_content"
+                android:text="2. MOTOR" />
+            <RadioGroup
+                android:id="@+id/rg_item2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginStart="8dp">
+                <RadioButton android:id="@+id/rb_item2_sim" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="48dp"/>
+                <RadioButton android:id="@+id/rb_item2_nao" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="8dp" android:minWidth="48dp"/>
+                <RadioButton android:id="@+id/rb_item2_na" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="8dp" android:minWidth="48dp"/>
+            </RadioGroup>
+            <EditText
+                android:id="@+id/et_item2_comment"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                android:hint="Comentário"
+                android:textSize="12sp"
+                android:layout_marginStart="8dp" />
+        </LinearLayout>
+        <View android:layout_width="match_parent" android:layout_height="1dp" android:background="?android:attr/listDivider" />
+
+        <!-- Item 3 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="3"
+                android:layout_height="wrap_content"
+                android:text="3. PNEUS" />
+            <RadioGroup
+                android:id="@+id/rg_item3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginStart="8dp">
+                <RadioButton android:id="@+id/rb_item3_sim" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="48dp"/>
+                <RadioButton android:id="@+id/rb_item3_nao" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="8dp" android:minWidth="48dp"/>
+                <RadioButton android:id="@+id/rb_item3_na" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="8dp" android:minWidth="48dp"/>
+            </RadioGroup>
+            <EditText
+                android:id="@+id/et_item3_comment"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                android:hint="Comentário"
+                android:textSize="12sp"
+                android:layout_marginStart="8dp" />
+        </LinearLayout>
+        <View android:layout_width="match_parent" android:layout_height="1dp" android:background="?android:attr/listDivider" />
+
+        <!-- Item 4 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="3"
+                android:layout_height="wrap_content"
+                android:text="4. UNIDADE TRATORA" />
+            <RadioGroup
+                android:id="@+id/rg_item4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginStart="8dp">
+                <RadioButton android:id="@+id/rb_item4_sim" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="48dp"/>
+                <RadioButton android:id="@+id/rb_item4_nao" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="8dp" android:minWidth="48dp"/>
+                <RadioButton android:id="@+id/rb_item4_na" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="8dp" android:minWidth="48dp"/>
+            </RadioGroup>
+            <EditText
+                android:id="@+id/et_item4_comment"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                android:hint="Comentário"
+                android:textSize="12sp"
+                android:layout_marginStart="8dp" />
+        </LinearLayout>
+        <View android:layout_width="match_parent" android:layout_height="1dp" android:background="?android:attr/listDivider" />
+
+        <!-- Item 5 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="3"
+                android:layout_height="wrap_content"
+                android:text="5. TANQUES DE COMBUSTÍVEL" />
+            <RadioGroup
+                android:id="@+id/rg_item5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginStart="8dp">
+                <RadioButton android:id="@+id/rb_item5_sim" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="48dp"/>
+                <RadioButton android:id="@+id/rb_item5_nao" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="8dp" android:minWidth="48dp"/>
+                <RadioButton android:id="@+id/rb_item5_na" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="8dp" android:minWidth="48dp"/>
+            </RadioGroup>
+            <EditText
+                android:id="@+id/et_item5_comment"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                android:hint="Comentário"
+                android:textSize="12sp"
+                android:layout_marginStart="8dp" />
+        </LinearLayout>
+        <View android:layout_width="match_parent" android:layout_height="1dp" android:background="?android:attr/listDivider" />
+
+        <!-- Item 6 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="3"
+                android:layout_height="wrap_content"
+                android:text="6. CABINE" />
+            <RadioGroup
+                android:id="@+id/rg_item6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginStart="8dp">
+                <RadioButton android:id="@+id/rb_item6_sim" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="48dp"/>
+                <RadioButton android:id="@+id/rb_item6_nao" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="8dp" android:minWidth="48dp"/>
+                <RadioButton android:id="@+id/rb_item6_na" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="8dp" android:minWidth="48dp"/>
+            </RadioGroup>
+            <EditText
+                android:id="@+id/et_item6_comment"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                android:hint="Comentário"
+                android:textSize="12sp"
+                android:layout_marginStart="8dp" />
+        </LinearLayout>
+        <View android:layout_width="match_parent" android:layout_height="1dp" android:background="?android:attr/listDivider" />
+
+        <!-- Item 7 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="3"
+                android:layout_height="wrap_content"
+                android:text="7. EIXO ELEVATÓRIO DE AR" />
+            <RadioGroup
+                android:id="@+id/rg_item7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginStart="8dp">
+                <RadioButton android:id="@+id/rb_item7_sim" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="48dp"/>
+                <RadioButton android:id="@+id/rb_item7_nao" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="8dp" android:minWidth="48dp"/>
+                <RadioButton android:id="@+id/rb_item7_na" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="8dp" android:minWidth="48dp"/>
+            </RadioGroup>
+            <EditText
+                android:id="@+id/et_item7_comment"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                android:hint="Comentário"
+                android:textSize="12sp"
+                android:layout_marginStart="8dp" />
+        </LinearLayout>
+        <View android:layout_width="match_parent" android:layout_height="1dp" android:background="?android:attr/listDivider" />
+
+        <!-- Item 8 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="3"
+                android:layout_height="wrap_content"
+                android:text="8. EIXO DE TRANSMISSÃO" />
+            <RadioGroup
+                android:id="@+id/rg_item8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginStart="8dp">
+                <RadioButton android:id="@+id/rb_item8_sim" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="48dp"/>
+                <RadioButton android:id="@+id/rb_item8_nao" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="8dp" android:minWidth="48dp"/>
+                <RadioButton android:id="@+id/rb_item8_na" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="8dp" android:minWidth="48dp"/>
+            </RadioGroup>
+            <EditText
+                android:id="@+id/et_item8_comment"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                android:hint="Comentário"
+                android:textSize="12sp"
+                android:layout_marginStart="8dp" />
+        </LinearLayout>
+        <View android:layout_width="match_parent" android:layout_height="1dp" android:background="?android:attr/listDivider" />
+
+        <!-- Item 9 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="3"
+                android:layout_height="wrap_content"
+                android:text="9. ÁREA DA QUINTA RODA" />
+            <RadioGroup
+                android:id="@+id/rg_item9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginStart="8dp">
+                <RadioButton android:id="@+id/rb_item9_sim" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="48dp"/>
+                <RadioButton android:id="@+id/rb_item9_nao" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="8dp" android:minWidth="48dp"/>
+                <RadioButton android:id="@+id/rb_item9_na" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="8dp" android:minWidth="48dp"/>
+            </RadioGroup>
+            <EditText
+                android:id="@+id/et_item9_comment"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                android:hint="Comentário"
+                android:textSize="12sp"
+                android:layout_marginStart="8dp" />
+        </LinearLayout>
+        <View android:layout_width="match_parent" android:layout_height="1dp" android:background="?android:attr/listDivider" />
+
+        <!-- Item 10 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="3"
+                android:layout_height="wrap_content"
+                android:text="10. SISTEMA DE EXAUSTÃO" />
+            <RadioGroup
+                android:id="@+id/rg_item10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginStart="8dp">
+                <RadioButton android:id="@+id/rb_item10_sim" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="48dp"/>
+                <RadioButton android:id="@+id/rb_item10_nao" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="8dp" android:minWidth="48dp"/>
+                <RadioButton android:id="@+id/rb_item10_na" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="8dp" android:minWidth="48dp"/>
+            </RadioGroup>
+            <EditText
+                android:id="@+id/et_item10_comment"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                android:hint="Comentário"
+                android:textSize="12sp"
+                android:layout_marginStart="8dp" />
+        </LinearLayout>
+        <View android:layout_width="match_parent" android:layout_height="1dp" android:background="?android:attr/listDivider" />
+
+        <!-- Item 11 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="3"
+                android:layout_height="wrap_content"
+                android:text="11. CHASSI" />
+            <RadioGroup
+                android:id="@+id/rg_item11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginStart="8dp">
+                <RadioButton android:id="@+id/rb_item11_sim" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="48dp"/>
+                <RadioButton android:id="@+id/rb_item11_nao" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="8dp" android:minWidth="48dp"/>
+                <RadioButton android:id="@+id/rb_item11_na" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="8dp" android:minWidth="48dp"/>
+            </RadioGroup>
+            <EditText
+                android:id="@+id/et_item11_comment"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                android:hint="Comentário"
+                android:textSize="12sp"
+                android:layout_marginStart="8dp" />
+        </LinearLayout>
+        <View android:layout_width="match_parent" android:layout_height="1dp" android:background="?android:attr/listDivider" />
+
+        <!-- Item 12 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="3"
+                android:layout_height="wrap_content"
+                android:text="12. PORTAS TRASEIRAS" />
+            <RadioGroup
+                android:id="@+id/rg_item12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginStart="8dp">
+                <RadioButton android:id="@+id/rb_item12_sim" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="48dp"/>
+                <RadioButton android:id="@+id/rb_item12_nao" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="8dp" android:minWidth="48dp"/>
+                <RadioButton android:id="@+id/rb_item12_na" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="8dp" android:minWidth="48dp"/>
+            </RadioGroup>
+            <EditText
+                android:id="@+id/et_item12_comment"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                android:hint="Comentário"
+                android:textSize="12sp"
+                android:layout_marginStart="8dp" />
+        </LinearLayout>
+        <View android:layout_width="match_parent" android:layout_height="1dp" android:background="?android:attr/listDivider" />
+
+        <!-- Item 13 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="3"
+                android:layout_height="wrap_content"
+                android:text="13. PORTA LATERAL DIREITA" />
+            <RadioGroup
+                android:id="@+id/rg_item13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginStart="8dp">
+                <RadioButton android:id="@+id/rb_item13_sim" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="48dp"/>
+                <RadioButton android:id="@+id/rb_item13_nao" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="8dp" android:minWidth="48dp"/>
+                <RadioButton android:id="@+id/rb_item13_na" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="8dp" android:minWidth="48dp"/>
+            </RadioGroup>
+            <EditText
+                android:id="@+id/et_item13_comment"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                android:hint="Comentário"
+                android:textSize="12sp"
+                android:layout_marginStart="8dp" />
+        </LinearLayout>
+        <View android:layout_width="match_parent" android:layout_height="1dp" android:background="?android:attr/listDivider" />
+
+        <!-- Item 14 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="3"
+                android:layout_height="wrap_content"
+                android:text="14. PORTA LATERAL ESQUERDA" />
+            <RadioGroup
+                android:id="@+id/rg_item14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginStart="8dp">
+                <RadioButton android:id="@+id/rb_item14_sim" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="48dp"/>
+                <RadioButton android:id="@+id/rb_item14_nao" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="8dp" android:minWidth="48dp"/>
+                <RadioButton android:id="@+id/rb_item14_na" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="8dp" android:minWidth="48dp"/>
+            </RadioGroup>
+            <EditText
+                android:id="@+id/et_item14_comment"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                android:hint="Comentário"
+                android:textSize="12sp"
+                android:layout_marginStart="8dp" />
+        </LinearLayout>
+        <View android:layout_width="match_parent" android:layout_height="1dp" android:background="?android:attr/listDivider" />
+
+        <!-- Item 15 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="3"
+                android:layout_height="wrap_content"
+                android:text="15. PAREDE FRONTAL" />
+            <RadioGroup
+                android:id="@+id/rg_item15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginStart="8dp">
+                <RadioButton android:id="@+id/rb_item15_sim" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="48dp"/>
+                <RadioButton android:id="@+id/rb_item15_nao" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="8dp" android:minWidth="48dp"/>
+                <RadioButton android:id="@+id/rb_item15_na" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="8dp" android:minWidth="48dp"/>
+            </RadioGroup>
+            <EditText
+                android:id="@+id/et_item15_comment"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                android:hint="Comentário"
+                android:textSize="12sp"
+                android:layout_marginStart="8dp" />
+        </LinearLayout>
+        <View android:layout_width="match_parent" android:layout_height="1dp" android:background="?android:attr/listDivider" />
+
+        <!-- Item 16 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="3"
+                android:layout_height="wrap_content"
+                android:text="16. TETO" />
+            <RadioGroup
+                android:id="@+id/rg_item16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginStart="8dp">
+                <RadioButton android:id="@+id/rb_item16_sim" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="48dp"/>
+                <RadioButton android:id="@+id/rb_item16_nao" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="8dp" android:minWidth="48dp"/>
+                <RadioButton android:id="@+id/rb_item16_na" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="8dp" android:minWidth="48dp"/>
+            </RadioGroup>
+            <EditText
+                android:id="@+id/et_item16_comment"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                android:hint="Comentário"
+                android:textSize="12sp"
+                android:layout_marginStart="8dp" />
+        </LinearLayout>
+        <View android:layout_width="match_parent" android:layout_height="1dp" android:background="?android:attr/listDivider" />
+
+        <!-- Item 17 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="3"
+                android:layout_height="wrap_content"
+                android:text="17. PISO DO COMP. DE CARGA" />
+            <RadioGroup
+                android:id="@+id/rg_item17"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginStart="8dp">
+                <RadioButton android:id="@+id/rb_item17_sim" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="48dp"/>
+                <RadioButton android:id="@+id/rb_item17_nao" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="8dp" android:minWidth="48dp"/>
+                <RadioButton android:id="@+id/rb_item17_na" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="8dp" android:minWidth="48dp"/>
+            </RadioGroup>
+            <EditText
+                android:id="@+id/et_item17_comment"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                android:hint="Comentário"
+                android:textSize="12sp"
+                android:layout_marginStart="8dp" />
+        </LinearLayout>
+        <View android:layout_width="match_parent" android:layout_height="1dp" android:background="?android:attr/listDivider" />
+
+        <!-- Item 18 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="3"
+                android:layout_height="wrap_content"
+                android:text="18. DUTOS DE AR" />
+            <RadioGroup
+                android:id="@+id/rg_item18"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginStart="8dp">
+                <RadioButton android:id="@+id/rb_item18_sim" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="48dp"/>
+                <RadioButton android:id="@+id/rb_item18_nao" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="8dp" android:minWidth="48dp"/>
+                <RadioButton android:id="@+id/rb_item18_na" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="8dp" android:minWidth="48dp"/>
+            </RadioGroup>
+            <EditText
+                android:id="@+id/et_item18_comment"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                android:hint="Comentário"
+                android:textSize="12sp"
+                android:layout_marginStart="8dp" />
+        </LinearLayout>
+        <View android:layout_width="match_parent" android:layout_height="1dp" android:background="?android:attr/listDivider" />
+
+        <!-- Item 19 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="3"
+                android:layout_height="wrap_content"
+                android:text="19. MOTOR CÂMARA FRIA" />
+            <RadioGroup
+                android:id="@+id/rg_item19"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginStart="8dp">
+                <RadioButton android:id="@+id/rb_item19_sim" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="48dp"/>
+                <RadioButton android:id="@+id/rb_item19_nao" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="8dp" android:minWidth="48dp"/>
+                <RadioButton android:id="@+id/rb_item19_na" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="8dp" android:minWidth="48dp"/>
+            </RadioGroup>
+            <EditText
+                android:id="@+id/et_item19_comment"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                android:hint="Comentário"
+                android:textSize="12sp"
+                android:layout_marginStart="8dp" />
+        </LinearLayout>
+        <View android:layout_width="match_parent" android:layout_height="1dp" android:background="?android:attr/listDivider" />
+
+        <!-- Additional Checks Section -->
+        <TextView
+            style="@style/TextAppearance.Material3.TitleMedium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Verificações Adicionais"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Odores -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="3"
+                android:layout_height="wrap_content"
+                android:text="Odores estranhos?" />
+            <RadioGroup
+                android:id="@+id/rg_odores"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginStart="8dp">
+                <RadioButton android:id="@+id/rb_odores_sim" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Sim" android:minWidth="60dp"/>
+                <RadioButton android:id="@+id/rb_odores_nao" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Não" android:layout_marginStart="8dp" android:minWidth="60dp"/>
+            </RadioGroup>
+            <EditText
+                android:id="@+id/et_odores_comment"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                android:hint="Comentário"
+                android:textSize="12sp"
+                android:layout_marginStart="8dp" />
+        </LinearLayout>
+        <View android:layout_width="match_parent" android:layout_height="1dp" android:background="?android:attr/listDivider" />
+
+        <!-- Pragas -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="3"
+                android:layout_height="wrap_content"
+                android:text="Pragas visíveis?" />
+            <RadioGroup
+                android:id="@+id/rg_pragas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginStart="8dp">
+                <RadioButton android:id="@+id/rb_pragas_sim" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Sim" android:minWidth="60dp"/>
+                <RadioButton android:id="@+id/rb_pragas_nao" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Não" android:layout_marginStart="8dp" android:minWidth="60dp"/>
+            </RadioGroup>
+            <EditText
+                android:id="@+id/et_pragas_comment"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                android:hint="Comentário"
+                android:textSize="12sp"
+                android:layout_marginStart="8dp" />
+        </LinearLayout>
+        <View android:layout_width="match_parent" android:layout_height="1dp" android:background="?android:attr/listDivider" />
+
+        <!-- Contaminação Química -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="3"
+                android:layout_height="wrap_content"
+                android:text="Contaminação química?" />
+            <RadioGroup
+                android:id="@+id/rg_contaminacao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginStart="8dp">
+                <RadioButton android:id="@+id/rb_contaminacao_sim" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Sim" android:minWidth="60dp"/>
+                <RadioButton android:id="@+id/rb_contaminacao_nao" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Não" android:layout_marginStart="8dp" android:minWidth="60dp"/>
+            </RadioGroup>
+            <EditText
+                android:id="@+id/et_contaminacao_comment"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                android:hint="Comentário"
+                android:textSize="12sp"
+                android:layout_marginStart="8dp" />
+        </LinearLayout>
+        <View android:layout_width="match_parent" android:layout_height="1dp" android:background="?android:attr/listDivider" />
+
+        <!-- Fundo/Parede Falsa -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="3"
+                android:layout_height="wrap_content"
+                android:text="Fundo/Parede falsa?" />
+            <RadioGroup
+                android:id="@+id/rg_fundo_parede"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginStart="8dp">
+                <RadioButton android:id="@+id/rb_fundo_parede_sim" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Sim" android:minWidth="60dp"/>
+                <RadioButton android:id="@+id/rb_fundo_parede_nao" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Não" android:layout_marginStart="8dp" android:minWidth="60dp"/>
+            </RadioGroup>
+            <EditText
+                android:id="@+id/et_fundo_parede_comment"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                android:hint="Comentário"
+                android:textSize="12sp"
+                android:layout_marginStart="8dp" />
+        </LinearLayout>
+        <View android:layout_width="match_parent" android:layout_height="1dp" android:background="?android:attr/listDivider" />
+
+        <!-- Indícios de Contaminação -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="3"
+                android:layout_height="wrap_content"
+                android:text="Indícios de contaminação?" />
+            <RadioGroup
+                android:id="@+id/rg_indicios"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginStart="8dp">
+                <RadioButton android:id="@+id/rb_indicios_sim" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Sim" android:minWidth="60dp"/>
+                <RadioButton android:id="@+id/rb_indicios_nao" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Não" android:layout_marginStart="8dp" android:minWidth="60dp"/>
+            </RadioGroup>
+            <EditText
+                android:id="@+id/et_indicios_comment"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                android:hint="Comentário"
+                android:textSize="12sp"
+                android:layout_marginStart="8dp" />
+        </LinearLayout>
+        <View android:layout_width="match_parent" android:layout_height="1dp" android:background="?android:attr/listDivider" />
+
+        <!-- Autoridade Notificada -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="16dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Autoridade competente notificada?" />
+            <RadioGroup
+                android:id="@+id/rg_autoridade"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <RadioButton android:id="@+id/rb_autoridade_sim" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Sim" />
+                <RadioButton android:id="@+id/rb_autoridade_nao" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Não" android:layout_marginStart="8dp"/>
+            </RadioGroup>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/data_hora_notificacao_layout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Data/Hora da Notificação"
+                android:visibility="gone"
+                tools:visibility="visible"
+                android:layout_marginTop="8dp">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/data_hora_notificacao_edit_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <EditText
+                android:id="@+id/et_autoridade_comment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Comentário"
+                android:textSize="12sp"
+                android:layout_marginTop="8dp" />
+        </LinearLayout>
+        <View android:layout_width="match_parent" android:layout_height="1dp" android:background="?android:attr/listDivider" android:layout_marginTop="8dp"/>
+
+        <!-- Item em Desacordo Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="16dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Item em desacordo?" />
+            <RadioGroup
+                android:id="@+id/rg_item_desacordo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <RadioButton android:id="@+id/rb_item_desacordo_sim" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Sim" />
+                <RadioButton android:id="@+id/rb_item_desacordo_nao" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Não" android:layout_marginStart="8dp"/>
+            </RadioGroup>
+        </LinearLayout>
+
+        <!-- Photo Upload Section (Initially Gone) -->
+        <LinearLayout
+            android:id="@+id/photo_upload_section"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone"
+            tools:visibility="visible"
+            android:layout_marginTop="8dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Foto do Item em Desacordo (Obrigatório)" />
+            <ImageView
+                android:id="@+id/item_desacordo_image_view"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="8dp"
+                android:scaleType="centerCrop"
+                android:src="@android:drawable/ic_menu_camera" />
+            <Button
+                android:id="@+id/take_photo_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="Tirar Foto"
+                android:layout_marginTop="8dp" />
+        </LinearLayout>
+
+        <!-- Footer Section -->
+        <TextView
+            android:id="@+id/assinatura_vistoriador_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Assinatura Vistoriador: [Nome Motorista Automático]"
+            android:textAppearance="@style/TextAppearance.Material3.BodyMedium"
+            android:layout_marginTop="24dp" />
+
+        <TextView
+            android:id="@+id/assinatura_motorista_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Assinatura Motorista: [Nome Motorista Automático]"
+            android:textAppearance="@style/TextAppearance.Material3.BodyMedium"
+            android:layout_marginTop="8dp" />
+
+        <!-- Status TextView (Initially Gone) -->
+        <TextView
+            android:id="@+id/status_text_view" 
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:textAppearance="@style/TextAppearance.Material3.BodyMedium"
+            android:textColor="?attr/colorPrimary"
+            android:visibility="gone"
+            tools:text="Salvando checklist..."
+            tools:visibility="visible" />
+
+        <Button
+            android:id="@+id/save_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Salvar Checklist"
+            android:layout_marginTop="16dp" />
+
+    </LinearLayout>
+</ScrollView>
+

@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Checklist Paranalog</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            font-size: 9pt;
+            margin: 15px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 15px;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 4px 6px;
+            text-align: left;
+            vertical-align: top;
+        }
+        th {
+            background-color: #f2f2f2;
+            font-size: 10pt;
+            font-weight: bold;
+        }
+        .header-table td { /* Less padding for header */
+            padding: 2px 4px;
+        }
+        .items-table th {
+            text-align: center;
+        }
+        .items-table td {
+            text-align: center;
+        }
+        .items-table td:first-child { /* Item description */
+            text-align: left;
+            width: 40%; /* Adjust width as needed */
+        }
+        .items-table td:last-child { /* Comments */
+            text-align: left;
+            width: 30%; /* Adjust width as needed */
+        }
+        .center {
+            text-align: center;
+        }
+        .bold {
+            font-weight: bold;
+        }
+        .signature-section {
+            margin-top: 20px;
+            display: table; /* Use table display for layout */
+            width: 100%;
+        }
+        .signature-box {
+            display: table-cell;
+            width: 33.33%;
+            text-align: center;
+            padding: 10px;
+            vertical-align: bottom;
+        }
+        .signature-line {
+            border-top: 1px solid #000;
+            margin-top: 20px;
+            padding-top: 2px;
+            font-size: 8pt;
+        }
+        .photo-section {
+            margin-top: 15px;
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: center;
+        }
+        .photo-section img {
+            max-width: 200px;
+            max-height: 200px;
+            margin-top: 5px;
+        }
+        /* Placeholders for data */
+        .data {
+            font-weight: normal; /* Data itself isn't bold, the label might be */
+        }
+    </style>
+</head>
+<body>
+
+    <h1 style="text-align: center; font-size: 14pt; margin-bottom: 10px;">CHECKLIST PARA INSPEÇÃO DE VEÍCULOS - 19 PONTOS</h1>
+
+    <table class="header-table">
+        <tr>
+            <td><span class="bold">Local da Coleta:</span> <span class="data">{{ localColeta }}</span></td>
+            <td><span class="bold">Responsável pela Inspeção:</span> <span class="data">{{ responsavel }}</span></td>
+            <td><span class="bold">Data:</span> <span class="data">{{ data }}</span></td>
+        </tr>
+        <tr>
+            <td><span class="bold">Placa cavalo:</span> <span class="data">{{ placaCavalo }}</span></td>
+            <td><span class="bold">Placa carreta:</span> <span class="data">{{ placaCarreta }}</span></td>
+            <td><span class="bold">Motorista:</span> <span class="data">{{ motorista }}</span></td>
+        </tr>
+        <tr>
+            <td><span class="bold">N. da DI/DUE/CRT/MIC/DTA:</span> <span class="data">{{ diDueCrtMicDta }}</span></td>
+            <td><span class="bold">N. NF-e:</span> <span class="data">{{ nfE }}</span></td>
+            <td><span class="bold">N. Lacre Entrada:</span> <span class="data">{{ lacreEntrada }}</span></td>
+        </tr>
+        <tr>
+            <td><span class="bold">N. Lacre Saída:</span> <span class="data">{{ lacreSaida }}</span></td>
+            <td><span class="bold">Peso Bruto (Kg):</span> <span class="data">{{ pesoBruto }}</span></td>
+            <td><span class="bold">Tipo Viagem:</span> <span class="data">{{ tipoViagem }}</span></td>
+        </tr>
+    </table>
+
+    <table class="items-table">
+        <thead>
+            <tr>
+                <th>Itens Inspecionados</th>
+                <th>SIM</th>
+                <th>NÃO</th>
+                <th>N/A</th>
+                <th>Comentários</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Repeat this block for each item 1-19 -->
+            <tr>
+                <td>1. PARA-CHOQUE</td>
+                <td>{{ 'X' if item1_parachoque == 'Sim' else '' }}</td>
+                <td>{{ 'X' if item1_parachoque == 'Não' else '' }}</td>
+                <td>{{ 'X' if item1_parachoque == 'N/A' else '' }}</td>
+                <td><span class="data">{{ item1_comentario }}</span></td>
+            </tr>
+            <tr>
+                <td>2. MOTOR</td>
+                <td>{{ 'X' if item2_motor == 'Sim' else '' }}</td>
+                <td>{{ 'X' if item2_motor == 'Não' else '' }}</td>
+                <td>{{ 'X' if item2_motor == 'N/A' else '' }}</td>
+                <td><span class="data">{{ item2_comentario }}</span></td>
+            </tr>
+            <tr>
+                <td>3. PNEUS</td>
+                <td>{{ 'X' if item3_pneus == 'Sim' else '' }}</td>
+                <td>{{ 'X' if item3_pneus == 'Não' else '' }}</td>
+                <td>{{ 'X' if item3_pneus == 'N/A' else '' }}</td>
+                <td><span class="data">{{ item3_comentario }}</span></td>
+            </tr>
+            <tr>
+                <td>4. PISO UNIDADE TRATORA</td>
+                <td>{{ 'X' if item4_unidadeTratora == 'Sim' else '' }}</td>
+                <td>{{ 'X' if item4_unidadeTratora == 'Não' else '' }}</td>
+                <td>{{ 'X' if item4_unidadeTratora == 'N/A' else '' }}</td>
+                <td><span class="data">{{ item4_comentario }}</span></td>
+            </tr>
+            <tr>
+                <td>5. TANQUES DE COMBUSTÍVEL</td>
+                <td>{{ 'X' if item5_tanquesCombustivel == 'Sim' else '' }}</td>
+                <td>{{ 'X' if item5_tanquesCombustivel == 'Não' else '' }}</td>
+                <td>{{ 'X' if item5_tanquesCombustivel == 'N/A' else '' }}</td>
+                <td><span class="data">{{ item5_comentario }}</span></td>
+            </tr>
+            <tr>
+                <td>6. CABINE</td>
+                <td>{{ 'X' if item6_cabine == 'Sim' else '' }}</td>
+                <td>{{ 'X' if item6_cabine == 'Não' else '' }}</td>
+                <td>{{ 'X' if item6_cabine == 'N/A' else '' }}</td>
+                <td><span class="data">{{ item6_comentario }}</span></td>
+            </tr>
+            <tr>
+                <td>7. EIXO ELEVATÓRIO DE AR</td>
+                <td>{{ 'X' if item7_eixoElevatorioAr == 'Sim' else '' }}</td>
+                <td>{{ 'X' if item7_eixoElevatorioAr == 'Não' else '' }}</td>
+                <td>{{ 'X' if item7_eixoElevatorioAr == 'N/A' else '' }}</td>
+                <td><span class="data">{{ item7_comentario }}</span></td>
+            </tr>
+            <tr>
+                <td>8. EIXO DE TRANSMISSÃO</td>
+                <td>{{ 'X' if item8_eixoTransmissao == 'Sim' else '' }}</td>
+                <td>{{ 'X' if item8_eixoTransmissao == 'Não' else '' }}</td>
+                <td>{{ 'X' if item8_eixoTransmissao == 'N/A' else '' }}</td>
+                <td><span class="data">{{ item8_comentario }}</span></td>
+            </tr>
+            <tr>
+                <td>9. ÁREA DA 5ª RODA</td>
+                <td>{{ 'X' if item9_areaQuintaRoda == 'Sim' else '' }}</td>
+                <td>{{ 'X' if item9_areaQuintaRoda == 'Não' else '' }}</td>
+                <td>{{ 'X' if item9_areaQuintaRoda == 'N/A' else '' }}</td>
+                <td><span class="data">{{ item9_comentario }}</span></td>
+            </tr>
+            <tr>
+                <td>10. SISTEMA DE EXAUSTÃO</td>
+                <td>{{ 'X' if item10_sistemaExaustao == 'Sim' else '' }}</td>
+                <td>{{ 'X' if item10_sistemaExaustao == 'Não' else '' }}</td>
+                <td>{{ 'X' if item10_sistemaExaustao == 'N/A' else '' }}</td>
+                <td><span class="data">{{ item10_comentario }}</span></td>
+            </tr>
+            <tr>
+                <td>11. CHASSI</td>
+                <td>{{ 'X' if item11_chassi == 'Sim' else '' }}</td>
+                <td>{{ 'X' if item11_chassi == 'Não' else '' }}</td>
+                <td>{{ 'X' if item11_chassi == 'N/A' else '' }}</td>
+                <td><span class="data">{{ item11_comentario }}</span></td>
+            </tr>
+            <tr>
+                <td>12. PORTAS TRASEIRA (BAÚ/SIDER)</td>
+                <td>{{ 'X' if item12_portasTraseira == 'Sim' else '' }}</td>
+                <td>{{ 'X' if item12_portasTraseira == 'Não' else '' }}</td>
+                <td>{{ 'X' if item12_portasTraseira == 'N/A' else '' }}</td>
+                <td><span class="data">{{ item12_comentario }}</span></td>
+            </tr>
+            <tr>
+                <td>13. PORTA LATERAL DIREITA</td>
+                <td>{{ 'X' if item13_portaLateralDireita == 'Sim' else '' }}</td>
+                <td>{{ 'X' if item13_portaLateralDireita == 'Não' else '' }}</td>
+                <td>{{ 'X' if item13_portaLateralDireita == 'N/A' else '' }}</td>
+                <td><span class="data">{{ item13_comentario }}</span></td>
+            </tr>
+            <tr>
+                <td>14. PORTA LATERAL ESQUERDA</td>
+                <td>{{ 'X' if item14_portaLateralEsquerda == 'Sim' else '' }}</td>
+                <td>{{ 'X' if item14_portaLateralEsquerda == 'Não' else '' }}</td>
+                <td>{{ 'X' if item14_portaLateralEsquerda == 'N/A' else '' }}</td>
+                <td><span class="data">{{ item14_comentario }}</span></td>
+            </tr>
+            <tr>
+                <td>15. PAREDE FRONTAL</td>
+                <td>{{ 'X' if item15_paredeFrontal == 'Sim' else '' }}</td>
+                <td>{{ 'X' if item15_paredeFrontal == 'Não' else '' }}</td>
+                <td>{{ 'X' if item15_paredeFrontal == 'N/A' else '' }}</td>
+                <td><span class="data">{{ item15_comentario }}</span></td>
+            </tr>
+            <tr>
+                <td>16. TETO</td>
+                <td>{{ 'X' if item16_teto == 'Sim' else '' }}</td>
+                <td>{{ 'X' if item16_teto == 'Não' else '' }}</td>
+                <td>{{ 'X' if item16_teto == 'N/A' else '' }}</td>
+                <td><span class="data">{{ item16_comentario }}</span></td>
+            </tr>
+            <tr>
+                <td>17. PISO DO COMPARTIMENTO DE CARGA</td>
+                <td>{{ 'X' if item17_pisoCompartimentoCarga == 'Sim' else '' }}</td>
+                <td>{{ 'X' if item17_pisoCompartimentoCarga == 'Não' else '' }}</td>
+                <td>{{ 'X' if item17_pisoCompartimentoCarga == 'N/A' else '' }}</td>
+                <td><span class="data">{{ item17_comentario }}</span></td>
+            </tr>
+            <tr>
+                <td>18. DUTOS/VENTILADORES/FILTRO DE AR</td>
+                <td>{{ 'X' if item18_dutosAr == 'Sim' else '' }}</td>
+                <td>{{ 'X' if item18_dutosAr == 'Não' else '' }}</td>
+                <td>{{ 'X' if item18_dutosAr == 'N/A' else '' }}</td>
+                <td><span class="data">{{ item18_comentario }}</span></td>
+            </tr>
+            <tr>
+                <td>19. MOTOR CAMARA FRIA</td>
+                <td>{{ 'X' if item19_motorCamaraFria == 'Sim' else '' }}</td>
+                <td>{{ 'X' if item19_motorCamaraFria == 'Não' else '' }}</td>
+                <td>{{ 'X' if item19_motorCamaraFria == 'N/A' else '' }}</td>
+                <td><span class="data">{{ item19_comentario }}</span></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <table class="items-table">
+         <thead>
+            <tr>
+                <th>Verificações Adicionais</th>
+                <th>SIM</th>
+                <th>NÃO</th>
+                <th>Comentários</th>
+            </tr>
+        </thead>
+        <tbody>
+             <tr>
+                <td>ODORES</td>
+                <td>{{ 'X' if odores == 'Sim' else '' }}</td>
+                <td>{{ 'X' if odores == 'Não' else '' }}</td>
+                <td><span class="data">{{ odores_comentario }}</span></td>
+            </tr>
+            <tr>
+                <td>PRAGAS VISÍVEIS (mofo, insetos, roedores e afins)</td>
+                <td>{{ 'X' if pragasVisiveis == 'Sim' else '' }}</td>
+                <td>{{ 'X' if pragasVisiveis == 'Não' else '' }}</td>
+                <td><span class="data">{{ pragas_comentario }}</span></td>
+            </tr>
+            <tr>
+                <td>CONTAMINAÇÃO QUÍMICA</td>
+                <td>{{ 'X' if contaminacaoQuimica == 'Sim' else '' }}</td>
+                <td>{{ 'X' if contaminacaoQuimica == 'Não' else '' }}</td>
+                <td><span class="data">{{ contaminacao_comentario }}</span></td>
+            </tr>
+            <tr>
+                <td>FUNDO OU PAREDE FALSA DETECTADO?</td>
+                <td>{{ 'X' if fundoParedeFalsa == 'Sim' else '' }}</td>
+                <td>{{ 'X' if fundoParedeFalsa == 'Não' else '' }}</td>
+                <td><span class="data">{{ fundoParede_comentario }}</span></td>
+            </tr>
+            <tr>
+                <td>INDÍCIOS DE CONTAMINAÇÃO?</td>
+                <td>{{ 'X' if indiciosContaminacao == 'Sim' else '' }}</td>
+                <td>{{ 'X' if indiciosContaminacao == 'Não' else '' }}</td>
+                <td><span class="data">{{ indicios_comentario }}</span></td>
+            </tr>
+            <tr>
+                <td>AUTORIDADE COMPETENTE NOTIFICADA?</td>
+                <td>{{ 'X' if autoridadeNotificada else '' }}</td>
+                <td>{{ 'X' if not autoridadeNotificada else '' }}</td>
+                <td><span class="data">{{ autoridade_comentario }}</span></td>
+            </tr>
+            {% if autoridadeNotificada %}
+            <tr>
+                <td colspan="4"><span class="bold">DATA/HORA DA NOTIFICAÇÃO:</span> <span class="data">{{ dataHoraNotificacao }}</span></td>
+            </tr>
+            {% endif %}
+        </tbody>
+    </table>
+
+    {% if itemEmDesacordo and fotoItemDesacordoPath %}
+    <div class="photo-section">
+        <span class="bold">Item em Desacordo - Foto:</span><br>
+        <img src="{{ fotoItemDesacordoPath }}" alt="Foto Item Desacordo">
+    </div>
+    {% endif %}
+
+    <div class="signature-section">
+        <div class="signature-box">
+            <div class="signature-line">
+                Assinatura Vistoriador<br>
+                (<span class="data">{{ assinaturaVistoriador }}</span>)
+            </div>
+        </div>
+        <div class="signature-box">
+            <div class="signature-line">
+                Assinatura Motorista<br>
+                (<span class="data">{{ assinaturaMotorista }}</span>)
+            </div>
+        </div>
+        <div class="signature-box">
+             <div class="signature-line">
+                Data/Hora Término<br>
+                (<span class="data">{{ dataHoraTermino }}</span>)
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
+

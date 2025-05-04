@@ -1,0 +1,57 @@
+<resources>
+    <string name="app_name">Paranalog Novo</string>
+    <!-- Add other strings as needed -->
+    <string name="login_button_text">Entrar</string>
+    <string name="register_button_text">Cadastrar</string>
+    <string name="cpf_hint">CPF</string>
+    <string name="password_hint">Senha</string>
+    <string name="name_hint">Nome Completo</string>
+    <string name="confirm_password_hint">Confirmar Senha</string>
+    <string name="plate_cavalo_hint">Placa Cavalo</string>
+    <string name="plate_carreta_hint">Placa Carreta</string>
+    <string name="invalid_cpf">CPF inválido</string>
+    <string name="password_mismatch">As senhas não conferem</string>
+    <string name="registration_successful">Cadastro realizado com sucesso!</string>
+    <string name="registration_failed">Falha no cadastro. Tente novamente.</string>
+    <string name="login_failed">CPF ou senha inválidos.</string>
+    <string name="required_field">Campo obrigatório</string>
+
+    <!-- Strings for Checklist Form -->
+    <string name="checklist_form_title">Formulário de Checklist</string>
+    <string name="plate_hint">Placa</string>
+    <string name="driver_hint">Motorista</string>
+    <string name="date_time_label">Data/Hora:</string>
+    <string name="section_tires">Pneus</string>
+    <string name="item_tire_calibration">Calibragem</string>
+    <string name="item_spare_tire">Estepe</string>
+    <string name="section_brakes">Freios</string>
+    <string name="section_electrical">Elétrica</string>
+    <string name="observations_hint">Observações</string>
+    <string name="save_checklist_button">Salvar Checklist</string>
+    <string name="option_yes">Sim</string>
+    <string name="option_no">Não</string>
+    <string name="option_na">N/A</string>
+    <string name="logo_description">Logo da Paranalog</string>
+    <string name="login_title">Login</string>
+    <string name="cpf_helper_text">Digite apenas números</string>
+    <string name="register_link_text">Não tem conta? Cadastre-se</string>
+
+    <string name="checklist_list_title">Meus Checklists</string>
+    <string name="empty_checklist_list">Nenhum checklist salvo ainda.</string>
+    <string name="add_checklist_description">Adicionar Novo Checklist</string>
+
+    <string name="crt_number_hint">Número CRT / DI / DUE / MIC / DTA</string>
+
+    <string name="create_new_checklist_button">Criar Novo Checklist</string>
+
+    <!-- Added for new checklist item card -->
+    <string name="view_pdf_button">Ver PDF</string>
+    <string name="plate_label_format">Placas: %s</string>
+    <string name="crt_label_format">CRT/DI/DUE: %s</string>
+
+    <!-- Added for search -->
+    <string name="search_hint">Buscar por Placa ou CRT</string>
+    <string name="search_title">Buscar</string>
+
+</resources>
+

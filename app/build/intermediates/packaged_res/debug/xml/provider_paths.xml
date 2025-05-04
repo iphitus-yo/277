@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Define paths accessible by FileProvider -->
+    <!-- Example: Allow sharing files from cache directory -->
+    <cache-path name="shared_cache" path="."/>
+    <!-- Example: Allow sharing files from files directory -->
+    <files-path name="shared_files" path="."/>
+    <!-- Add other paths as needed, e.g., for external storage if required -->
+    <!-- <external-path name="external_files" path="."/> -->
+</paths>
+

@@ -1,0 +1,1 @@
+[{"navFile":"src/main/res/navigation/nav_graph.xml","javaFiles":["com.example.paranalog.ui.auth.RegisterFragmentDirections","com.example.paranalog.ui.auth.LoginFragmentDirections","com.example.paranalog.ui.checklist.ChecklistListFragmentDirections"]}]

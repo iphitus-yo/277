@@ -1,0 +1,26 @@
+[
+    {
+        "merged": "com.example.paranalog.app-mergeDebugResources-55:/layout/activity_main.xml",
+        "source": "com.example.paranalog.app-main-58:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.example.paranalog.app-mergeDebugResources-55:/layout/fragment_checklist_list.xml",
+        "source": "com.example.paranalog.app-main-58:/layout/fragment_checklist_list.xml"
+    },
+    {
+        "merged": "com.example.paranalog.app-mergeDebugResources-55:/layout/checklist_item.xml",
+        "source": "com.example.paranalog.app-main-58:/layout/checklist_item.xml"
+    },
+    {
+        "merged": "com.example.paranalog.app-mergeDebugResources-55:/layout/fragment_checklist_form.xml",
+        "source": "com.example.paranalog.app-main-58:/layout/fragment_checklist_form.xml"
+    },
+    {
+        "merged": "com.example.paranalog.app-mergeDebugResources-55:/layout/fragment_login.xml",
+        "source": "com.example.paranalog.app-main-58:/layout/fragment_login.xml"
+    },
+    {
+        "merged": "com.example.paranalog.app-mergeDebugResources-55:/layout/fragment_register.xml",
+        "source": "com.example.paranalog.app-main-58:/layout/fragment_register.xml"
+    }
+]
